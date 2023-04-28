@@ -25,6 +25,10 @@ class CartComponent extends Component
         session()->flash('success_message', 'Item had been removed!');
     }
 
+    public function clearAll(){
+        Cart::destroy();
+    }
+
     public function render()
     {
         return view('livewire.cart-component');
